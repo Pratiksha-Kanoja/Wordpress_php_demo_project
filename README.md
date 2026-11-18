@@ -1,4 +1,4 @@
-## Toposel Assignment – WordPress Plugin
+## Assignment – WordPress Plugin
 
 This repository contains a WordPress **plugin** implementation for the assignment requirements:
 
@@ -29,7 +29,7 @@ This repository contains a WordPress **plugin** implementation for the assignmen
 ### Plugin structure
 
 ```
-toposel-landing-page.php        Plugin header, constants, loads the classes
+landing-page.php                Plugin header, constants, loads the classes
 includes/
   class-tpa-plugin.php          Wires all modules together
   class-tpa-cpt.php             Registers the "Landing Pages" post type (tp_landing)
@@ -66,10 +66,10 @@ The plugin is mounted and activated automatically.
 ### Install on an existing WordPress site
 
 1. Copy this plugin folder into `wp-content/plugins/`
-2. Activate **Toposel Assignment – Landing Page**
+2. Activate **Assignment – Landing Page**
 3. On activation it creates:
    - A sample `Landing Page` entry
-   - A WordPress page titled **“Toposel Landing Demo”** with the shortcode embedded
+   - A WordPress page titled **“Landing Demo”** with the shortcode embedded
 
 ### Note about the reference image
 

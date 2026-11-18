@@ -56,14 +56,14 @@ final class TPA_Shortcode {
 		$post_id = (int) ($atts['id'] ?? 0);
 		if ($post_id <= 0) {
 			return current_user_can('manage_options')
-				? '<p><strong>Toposel:</strong> Missing landing page id. Use <code>[tp_landing id="123"]</code>.</p>'
+				? '<p>Missing landing page id. Use <code>[tp_landing id="123"]</code>.</p>'
 				: '';
 		}
 
 		$post = get_post($post_id);
 		if (!$post || $post->post_type !== TPA_CPT::POST_TYPE) {
 			return current_user_can('manage_options')
-				? '<p><strong>Toposel:</strong> Invalid landing page id.</p>'
+				? '<p>Invalid landing page id.</p>'
 				: '';
 		}
 

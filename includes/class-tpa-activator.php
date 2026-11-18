@@ -30,7 +30,7 @@ final class TPA_Activator {
 				[
 					'post_type' => TPA_CPT::POST_TYPE,
 					'post_status' => 'publish',
-					'post_title' => __('Toposel Landing (Sample)', 'toposel-assignment'),
+					'post_title' => __('Landing (Sample)', 'assignment'),
 				],
 				true
 			);
@@ -47,7 +47,7 @@ final class TPA_Activator {
 				[
 					'post_type' => 'page',
 					'post_status' => 'publish',
-					'post_title' => __('Toposel Landing Demo', 'toposel-assignment'),
+					'post_title' => __('Landing Demo', 'assignment'),
 					'post_content' => '[tp_landing id="' . (int) $landing_id . '"]',
 				],
 				true

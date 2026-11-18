@@ -70,7 +70,7 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 	<aside class="tpa-sidebar" id="tpa-sidebar-<?php echo (int) $tpa['post_id']; ?>">
 		<div class="tpa-brand"><?php echo esc_html($brand_name); ?></div>
 
-		<nav aria-label="<?php esc_attr_e('Main menu', 'toposel-assignment'); ?>">
+		<nav aria-label="<?php esc_attr_e('Main menu', 'assignment'); ?>">
 			<ul class="tpa-nav">
 				<?php foreach ($nav_items as $i => $item) : ?>
 					<?php
@@ -101,7 +101,7 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 
 		<?php if ($quick_actions) : ?>
 			<div class="tpa-side-block">
-				<div class="tpa-side-block__title"><?php esc_html_e('Quick actions', 'toposel-assignment'); ?></div>
+				<div class="tpa-side-block__title"><?php esc_html_e('Quick actions', 'assignment'); ?></div>
 				<ul class="tpa-side-list">
 					<?php foreach ($quick_actions as $action) : ?>
 						<?php
@@ -132,7 +132,7 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 		<?php if ($last_orders) : ?>
 			<div class="tpa-side-block">
 				<div class="tpa-side-block__title">
-					<?php esc_html_e('Last orders', 'toposel-assignment'); ?>
+					<?php esc_html_e('Last orders', 'assignment'); ?>
 					<strong><?php echo esc_html((string) $orders_count); ?></strong>
 				</div>
 				<ul class="tpa-side-list">
@@ -156,27 +156,27 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 						</li>
 					<?php endforeach; ?>
 				</ul>
-				<button type="button" class="tpa-side-block__more" data-tpa-orders><?php esc_html_e('See all', 'toposel-assignment'); ?></button>
+				<button type="button" class="tpa-side-block__more" data-tpa-orders><?php esc_html_e('See all', 'assignment'); ?></button>
 			</div>
 		<?php endif; ?>
 
 		<a class="tpa-logout" href="<?php echo esc_url($logout_url); ?>">
 			<?php echo $icon('<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/>'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-			<span><?php esc_html_e('Log out', 'toposel-assignment'); ?></span>
+			<span><?php esc_html_e('Log out', 'assignment'); ?></span>
 		</a>
 	</aside>
 	<div class="tpa-overlay" data-tpa-close hidden></div>
 
 	<main class="tpa-main">
 		<header class="tpa-top">
-			<button type="button" class="tpa-menu-btn" data-tpa-menu aria-controls="tpa-sidebar-<?php echo (int) $tpa['post_id']; ?>" aria-expanded="false" aria-label="<?php esc_attr_e('Open menu', 'toposel-assignment'); ?>">
+			<button type="button" class="tpa-menu-btn" data-tpa-menu aria-controls="tpa-sidebar-<?php echo (int) $tpa['post_id']; ?>" aria-expanded="false" aria-label="<?php esc_attr_e('Open menu', 'assignment'); ?>">
 				<?php echo $icon('<path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/>', 18); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</button>
 
 			<div class="tpa-stat">
 				<span class="tpa-stat__num"><?php echo esc_html((string) $orders_count); ?></span>
 				<span class="tpa-stat__meta">
-					<span class="tpa-stat__label"><?php esc_html_e('Orders', 'toposel-assignment'); ?></span>
+					<span class="tpa-stat__label"><?php esc_html_e('Orders', 'assignment'); ?></span>
 					<span class="tpa-stat__sub"><?php echo esc_html($orders_period); ?></span>
 				</span>
 			</div>
@@ -189,7 +189,7 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 			<div class="tpa-userbar">
 				<button type="button" class="tpa-pill" data-tpa-cart-open aria-expanded="false" aria-controls="tpa-cart-<?php echo (int) $tpa['post_id']; ?>">
 					<?php echo $icon('<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/>'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-					<span><?php esc_html_e('Cart', 'toposel-assignment'); ?></span>
+					<span><?php esc_html_e('Cart', 'assignment'); ?></span>
 					<span class="tpa-cart-count" data-tpa-cart-count hidden>0</span>
 				</button>
 				<span class="tpa-team" aria-hidden="true">
@@ -204,10 +204,10 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 		</header>
 
 		<div class="tpa-headrow">
-			<h1 class="tpa-title"><?php esc_html_e('Explore', 'toposel-assignment'); ?></h1>
+			<h1 class="tpa-title"><?php esc_html_e('Explore', 'assignment'); ?></h1>
 
 			<?php $tab_keys = ['all', 'men', 'women']; ?>
-			<div class="tpa-tabs" data-tpa-toggle-group role="group" aria-label="<?php esc_attr_e('Categories', 'toposel-assignment'); ?>">
+			<div class="tpa-tabs" data-tpa-toggle-group role="group" aria-label="<?php esc_attr_e('Categories', 'assignment'); ?>">
 				<?php foreach ($main_tabs as $i => $tab) : ?>
 					<?php $tab_key = $tab_keys[$i] ?? sanitize_title($tab); ?>
 					<button type="button" class="tpa-tabs__btn<?php echo $i === 0 ? ' is-active' : ''; ?>" data-tpa-category="<?php echo esc_attr($tab_key); ?>" aria-pressed="<?php echo $i === 0 ? 'true' : 'false'; ?>"><?php echo esc_html($tab); ?></button>
@@ -216,7 +216,7 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 
 			<div class="tpa-tools">
 				<div class="tpa-filter">
-					<button type="button" class="tpa-pill tpa-pill--dot" data-tpa-filters aria-expanded="false" aria-controls="tpa-filters-<?php echo (int) $tpa['post_id']; ?>"><?php esc_html_e('Filters', 'toposel-assignment'); ?></button>
+					<button type="button" class="tpa-pill tpa-pill--dot" data-tpa-filters aria-expanded="false" aria-controls="tpa-filters-<?php echo (int) $tpa['post_id']; ?>"><?php esc_html_e('Filters', 'assignment'); ?></button>
 					<div class="tpa-popover" id="tpa-filters-<?php echo (int) $tpa['post_id']; ?>" data-tpa-filter-panel hidden>
 						<?php foreach ($main_tabs as $i => $tab) : ?>
 							<?php $tab_key = $tab_keys[$i] ?? sanitize_title($tab); ?>
@@ -225,8 +225,8 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 					</div>
 				</div>
 				<div class="tpa-search">
-					<input class="tpa-search__input" data-tpa-search-input type="search" hidden placeholder="<?php esc_attr_e('Search', 'toposel-assignment'); ?>" aria-label="<?php esc_attr_e('Search', 'toposel-assignment'); ?>">
-					<button type="button" class="tpa-round-btn" data-tpa-search aria-expanded="false" aria-label="<?php esc_attr_e('Search', 'toposel-assignment'); ?>">
+					<input class="tpa-search__input" data-tpa-search-input type="search" hidden placeholder="<?php esc_attr_e('Search', 'assignment'); ?>" aria-label="<?php esc_attr_e('Search', 'assignment'); ?>">
+					<button type="button" class="tpa-round-btn" data-tpa-search aria-expanded="false" aria-label="<?php esc_attr_e('Search', 'assignment'); ?>">
 						<?php echo $icon('<circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/>', 18); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 					</button>
 				</div>
@@ -256,9 +256,9 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 				<?php echo $image($promo_secondary, 'image_id', 'promo_secondary', 'tpa-feature__img', 'medium_large'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				<?php $feature_url = (string) ($promo_secondary['url'] ?? ''); ?>
 				<?php if ($has_url($feature_url)) : ?>
-					<a class="tpa-corner-btn" href="<?php echo esc_url($feature_url); ?>" aria-label="<?php esc_attr_e('Open', 'toposel-assignment'); ?>"><?php echo $arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="tpa-corner-btn" href="<?php echo esc_url($feature_url); ?>" aria-label="<?php esc_attr_e('Open', 'assignment'); ?>"><?php echo $arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				<?php else : ?>
-					<button type="button" class="tpa-corner-btn" data-tpa-detail data-title="<?php echo esc_attr((string) $promo_secondary['title']); ?>" data-text="<?php echo esc_attr((string) $promo_secondary['subtitle']); ?>" aria-label="<?php esc_attr_e('Open', 'toposel-assignment'); ?>"><?php echo $arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
+					<button type="button" class="tpa-corner-btn" data-tpa-detail data-title="<?php echo esc_attr((string) $promo_secondary['title']); ?>" data-text="<?php echo esc_attr((string) $promo_secondary['subtitle']); ?>" aria-label="<?php esc_attr_e('Open', 'assignment'); ?>"><?php echo $arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
 				<?php endif; ?>
 			</section>
 
@@ -281,7 +281,7 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 								<?php endforeach; ?>
 							</span>
 						<?php endif; ?>
-						<button type="button" class="tpa-heart" data-title="<?php echo esc_attr($product_title); ?>" aria-pressed="false" aria-label="<?php esc_attr_e('Add to favourites', 'toposel-assignment'); ?>"><?php echo $heart; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
+						<button type="button" class="tpa-heart" data-title="<?php echo esc_attr($product_title); ?>" aria-pressed="false" aria-label="<?php esc_attr_e('Add to favourites', 'assignment'); ?>"><?php echo $heart; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
 					</div>
 					<div class="tpa-product__info">
 						<div>
@@ -299,7 +299,7 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 
 			<section class="tpa-card tpa-offer">
 				<?php echo $image($offer_card, 'image_id', 'offer_card', 'tpa-offer__img', 'medium_large'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-				<button type="button" class="tpa-heart" data-title="<?php echo esc_attr((string) $offer_card['pill']); ?>" aria-pressed="false" aria-label="<?php esc_attr_e('Add to favourites', 'toposel-assignment'); ?>"><?php echo $heart; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
+				<button type="button" class="tpa-heart" data-title="<?php echo esc_attr((string) $offer_card['pill']); ?>" aria-pressed="false" aria-label="<?php esc_attr_e('Add to favourites', 'assignment'); ?>"><?php echo $heart; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
 				<?php $offer_url = (string) ($offer_card['url'] ?? ''); ?>
 				<?php if ($has_url($offer_url)) : ?>
 					<a class="tpa-offer__pill" href="<?php echo esc_url($offer_url); ?>"><?php echo esc_html((string) $offer_card['pill']); ?></a>
@@ -313,8 +313,8 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 					<div class="tpa-favs__head">
 						<h3 class="tpa-favs__title"><?php echo esc_html((string) $favourites_card['title']); ?></h3>
 						<span class="tpa-favs__nav">
-							<button type="button" class="tpa-favs__arrow" data-tpa-fav-prev aria-label="<?php esc_attr_e('Previous favourites', 'toposel-assignment'); ?>"><?php echo $icon('<path d="M15 18l-6-6 6-6"/>', 14); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
-							<button type="button" class="tpa-favs__arrow" data-tpa-fav-next aria-label="<?php esc_attr_e('Next favourites', 'toposel-assignment'); ?>"><?php echo $icon('<path d="M9 18l6-6-6-6"/>', 14); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
+							<button type="button" class="tpa-favs__arrow" data-tpa-fav-prev aria-label="<?php esc_attr_e('Previous favourites', 'assignment'); ?>"><?php echo $icon('<path d="M15 18l-6-6 6-6"/>', 14); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
+							<button type="button" class="tpa-favs__arrow" data-tpa-fav-next aria-label="<?php esc_attr_e('Next favourites', 'assignment'); ?>"><?php echo $icon('<path d="M9 18l6-6-6-6"/>', 14); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
 						</span>
 					</div>
 					<div class="tpa-favs__items">
@@ -338,25 +338,25 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 				<?php echo $image($bottom_banner, 'image_id', 'bottom_banner', 'tpa-banner__img', 'medium_large'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				<?php $banner_url = (string) ($bottom_banner['url'] ?? ''); ?>
 				<?php if ($has_url($banner_url)) : ?>
-					<a class="tpa-corner-btn" href="<?php echo esc_url($banner_url); ?>" aria-label="<?php esc_attr_e('Open', 'toposel-assignment'); ?>"><?php echo $arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
+					<a class="tpa-corner-btn" href="<?php echo esc_url($banner_url); ?>" aria-label="<?php esc_attr_e('Open', 'assignment'); ?>"><?php echo $arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></a>
 				<?php else : ?>
-					<button type="button" class="tpa-corner-btn" data-tpa-detail data-title="<?php echo esc_attr((string) $bottom_banner['title']); ?>" data-text="<?php echo esc_attr((string) $bottom_banner['subtitle']); ?>" aria-label="<?php esc_attr_e('Open', 'toposel-assignment'); ?>"><?php echo $arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
+					<button type="button" class="tpa-corner-btn" data-tpa-detail data-title="<?php echo esc_attr((string) $bottom_banner['title']); ?>" data-text="<?php echo esc_attr((string) $bottom_banner['subtitle']); ?>" aria-label="<?php esc_attr_e('Open', 'assignment'); ?>"><?php echo $arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></button>
 				<?php endif; ?>
 			</section>
 
-			<p class="tpa-empty" data-tpa-empty hidden><?php esc_html_e('Nothing matches your search.', 'toposel-assignment'); ?></p>
+			<p class="tpa-empty" data-tpa-empty hidden><?php esc_html_e('Nothing matches your search.', 'assignment'); ?></p>
 		</div>
 	</main>
 
-	<aside class="tpa-cart" id="tpa-cart-<?php echo (int) $tpa['post_id']; ?>" data-tpa-cart hidden aria-label="<?php esc_attr_e('Cart', 'toposel-assignment'); ?>">
+	<aside class="tpa-cart" id="tpa-cart-<?php echo (int) $tpa['post_id']; ?>" data-tpa-cart hidden aria-label="<?php esc_attr_e('Cart', 'assignment'); ?>">
 		<div class="tpa-cart__head">
-			<h2><?php esc_html_e('Cart', 'toposel-assignment'); ?></h2>
-			<button type="button" class="tpa-cart__close" data-tpa-cart-close aria-label="<?php esc_attr_e('Close cart', 'toposel-assignment'); ?>">×</button>
+			<h2><?php esc_html_e('Cart', 'assignment'); ?></h2>
+			<button type="button" class="tpa-cart__close" data-tpa-cart-close aria-label="<?php esc_attr_e('Close cart', 'assignment'); ?>">×</button>
 		</div>
-		<p class="tpa-cart__empty" data-tpa-cart-empty><?php esc_html_e('Your cart is empty.', 'toposel-assignment'); ?></p>
+		<p class="tpa-cart__empty" data-tpa-cart-empty><?php esc_html_e('Your cart is empty.', 'assignment'); ?></p>
 		<ul class="tpa-cart__list" data-tpa-cart-list></ul>
 		<div class="tpa-cart__foot" data-tpa-cart-foot hidden>
-			<span><?php esc_html_e('Total', 'toposel-assignment'); ?></span>
+			<span><?php esc_html_e('Total', 'assignment'); ?></span>
 			<strong data-tpa-cart-total></strong>
 		</div>
 	</aside>
@@ -366,8 +366,8 @@ $heart = $icon('<path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0
 			<h2 data-tpa-dialog-title></h2>
 			<div data-tpa-dialog-body></div>
 			<div class="tpa-dialog__actions">
-				<button type="button" class="tpa-dialog__btn" data-tpa-dialog-close><?php esc_html_e('Close', 'toposel-assignment'); ?></button>
-				<button type="submit" class="tpa-dialog__btn tpa-dialog__btn--primary" data-tpa-dialog-submit><?php esc_html_e('Done', 'toposel-assignment'); ?></button>
+				<button type="button" class="tpa-dialog__btn" data-tpa-dialog-close><?php esc_html_e('Close', 'assignment'); ?></button>
+				<button type="submit" class="tpa-dialog__btn tpa-dialog__btn--primary" data-tpa-dialog-submit><?php esc_html_e('Done', 'assignment'); ?></button>
 			</div>
 		</form>
 	</dialog>

@@ -42,9 +42,9 @@ final class TPA_Plugin {
 				return;
 			}
 			echo '<div class="notice notice-success is-dismissible"><p>'
-				. esc_html__('Toposel Assignment plugin activated. Demo page created:', 'toposel-assignment')
+				. esc_html__('Assignment plugin activated. Demo page created:', 'assignment')
 				. ' <a href="' . esc_url($url) . '" target="_blank" rel="noopener noreferrer">'
-				. esc_html__('Open Demo', 'toposel-assignment')
+				. esc_html__('Open Demo', 'assignment')
 				. '</a></p></div>';
 		});
 
@@ -53,7 +53,7 @@ final class TPA_Plugin {
 			'plugin_action_links_' . plugin_basename(TPA_PLUGIN_FILE),
 			static function (array $links): array {
 				$url = admin_url('edit.php?post_type=tp_landing');
-				$links[] = '<a href="' . esc_url($url) . '">' . esc_html__('Landing Pages', 'toposel-assignment') . '</a>';
+				$links[] = '<a href="' . esc_url($url) . '">' . esc_html__('Landing Pages', 'assignment') . '</a>';
 				return $links;
 			}
 		);

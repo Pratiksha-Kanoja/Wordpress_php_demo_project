@@ -1,13 +1,13 @@
 <?php
 /**
- * Plugin Name: Toposel Assignment – Landing Page
+ * Plugin Name: Assignment – Landing Page
  * Description: Implements a responsive landing page as a plugin (no page builders) with dynamic, CMS-manageable content.
  * Version: 0.1.0
- * Author: Toposel Assignment
+ * Author: Assignment
  * Requires at least: 6.2
  * Requires PHP: 7.4
  * License: GPLv2 or later
- * Text Domain: toposel-assignment
+ * Text Domain: assignment
  */
 declare(strict_types=1);
 

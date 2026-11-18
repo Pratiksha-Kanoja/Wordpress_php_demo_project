@@ -61,7 +61,7 @@ final class TPA_Meta {
 	public static function register_metaboxes(): void {
 		add_meta_box(
 			'tpa_landing_content',
-			__('Landing Page Content', 'toposel-assignment'),
+			__('Landing Page Content', 'assignment'),
 			[self::class, 'render_metabox'],
 			TPA_CPT::POST_TYPE,
 			'normal',
@@ -108,208 +108,208 @@ final class TPA_Meta {
 		</style>
 
 		<p class="tpa-help">
-			<strong><?php esc_html_e('App URL (theme-independent):', 'toposel-assignment'); ?></strong>
+			<strong><?php esc_html_e('App URL (theme-independent):', 'assignment'); ?></strong>
 			<a href="<?php echo esc_url($app_url); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html($app_url); ?></a>
 		</p>
 
-		<h3 style="margin:0 0 10px"><?php esc_html_e('Header', 'toposel-assignment'); ?></h3>
+		<h3 style="margin:0 0 10px"><?php esc_html_e('Header', 'assignment'); ?></h3>
 		<div class="tpa-grid">
 			<div class="tpa-field">
-				<label for="tpa_brand_name"><?php esc_html_e('Brand Name', 'toposel-assignment'); ?></label>
-				<input id="tpa_brand_name" name="tpa_brand_name" type="text" value="<?php echo esc_attr($brand_name); ?>" placeholder="<?php esc_attr_e('e.g. BuyMore', 'toposel-assignment'); ?>" />
+				<label for="tpa_brand_name"><?php esc_html_e('Brand Name', 'assignment'); ?></label>
+				<input id="tpa_brand_name" name="tpa_brand_name" type="text" value="<?php echo esc_attr($brand_name); ?>" placeholder="<?php esc_attr_e('e.g. BuyMore', 'assignment'); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label for="tpa_user_name"><?php esc_html_e('User Name', 'toposel-assignment'); ?></label>
-				<input id="tpa_user_name" name="tpa_user_name" type="text" value="<?php echo esc_attr($user_name); ?>" placeholder="<?php esc_attr_e('e.g. Ryana', 'toposel-assignment'); ?>" />
+				<label for="tpa_user_name"><?php esc_html_e('User Name', 'assignment'); ?></label>
+				<input id="tpa_user_name" name="tpa_user_name" type="text" value="<?php echo esc_attr($user_name); ?>" placeholder="<?php esc_attr_e('e.g. Ryana', 'assignment'); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label for="tpa_orders_count"><?php esc_html_e('Orders Count', 'toposel-assignment'); ?></label>
+				<label for="tpa_orders_count"><?php esc_html_e('Orders Count', 'assignment'); ?></label>
 				<input id="tpa_orders_count" name="tpa_orders_count" type="number" min="0" value="<?php echo esc_attr((string) $orders_count); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label for="tpa_orders_period"><?php esc_html_e('Orders Period Label', 'toposel-assignment'); ?></label>
-				<input id="tpa_orders_period" name="tpa_orders_period" type="text" value="<?php echo esc_attr($orders_period); ?>" placeholder="<?php esc_attr_e('e.g. Last 7 days', 'toposel-assignment'); ?>" />
+				<label for="tpa_orders_period"><?php esc_html_e('Orders Period Label', 'assignment'); ?></label>
+				<input id="tpa_orders_period" name="tpa_orders_period" type="text" value="<?php echo esc_attr($orders_period); ?>" placeholder="<?php esc_attr_e('e.g. Last 7 days', 'assignment'); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label for="tpa_top_tab_left"><?php esc_html_e('Top Tabs (Left)', 'toposel-assignment'); ?></label>
+				<label for="tpa_top_tab_left"><?php esc_html_e('Top Tabs (Left)', 'assignment'); ?></label>
 				<input id="tpa_top_tab_left" name="tpa_top_tabs[left]" type="text" value="<?php echo esc_attr((string) ($top_tabs['left'] ?? 'Dashboard')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label for="tpa_top_tab_right"><?php esc_html_e('Top Tabs (Right)', 'toposel-assignment'); ?></label>
+				<label for="tpa_top_tab_right"><?php esc_html_e('Top Tabs (Right)', 'assignment'); ?></label>
 				<input id="tpa_top_tab_right" name="tpa_top_tabs[right]" type="text" value="<?php echo esc_attr((string) ($top_tabs['right'] ?? 'Website')); ?>" />
 			</div>
 		</div>
 
 		<div class="tpa-sep"></div>
 
-		<h3 style="margin:0 0 10px"><?php esc_html_e('Sidebar Menu (repeatable)', 'toposel-assignment'); ?></h3>
+		<h3 style="margin:0 0 10px"><?php esc_html_e('Sidebar Menu (repeatable)', 'assignment'); ?></h3>
 		<div class="tpa-repeater" data-repeater="nav">
 			<div class="tpa-repeater-rows">
 				<?php foreach ($nav_items as $idx => $row) : ?>
 					<?php self::render_nav_row((int) $idx, is_array($row) ? $row : []); ?>
 				<?php endforeach; ?>
 			</div>
-			<button type="button" class="button tpa-add" data-add="nav"><?php esc_html_e('Add Menu Item', 'toposel-assignment'); ?></button>
+			<button type="button" class="button tpa-add" data-add="nav"><?php esc_html_e('Add Menu Item', 'assignment'); ?></button>
 		</div>
 
 		<div class="tpa-sep"></div>
 
-		<h3 style="margin:0 0 10px"><?php esc_html_e('Quick Actions (repeatable)', 'toposel-assignment'); ?></h3>
+		<h3 style="margin:0 0 10px"><?php esc_html_e('Quick Actions (repeatable)', 'assignment'); ?></h3>
 		<div class="tpa-repeater" data-repeater="actions">
 			<div class="tpa-repeater-rows">
 				<?php foreach ($quick_actions as $idx => $row) : ?>
 					<?php self::render_action_row((int) $idx, is_array($row) ? $row : []); ?>
 				<?php endforeach; ?>
 			</div>
-			<button type="button" class="button tpa-add" data-add="actions"><?php esc_html_e('Add Action', 'toposel-assignment'); ?></button>
+			<button type="button" class="button tpa-add" data-add="actions"><?php esc_html_e('Add Action', 'assignment'); ?></button>
 		</div>
 
 		<div class="tpa-sep"></div>
 
-		<h3 style="margin:0 0 10px"><?php esc_html_e('Last Orders (repeatable)', 'toposel-assignment'); ?></h3>
+		<h3 style="margin:0 0 10px"><?php esc_html_e('Last Orders (repeatable)', 'assignment'); ?></h3>
 		<div class="tpa-repeater" data-repeater="orders">
 			<div class="tpa-repeater-rows">
 				<?php foreach ($last_orders as $idx => $row) : ?>
 					<?php self::render_last_order_row((int) $idx, is_array($row) ? $row : []); ?>
 				<?php endforeach; ?>
 			</div>
-			<button type="button" class="button tpa-add" data-add="orders"><?php esc_html_e('Add Last Order', 'toposel-assignment'); ?></button>
+			<button type="button" class="button tpa-add" data-add="orders"><?php esc_html_e('Add Last Order', 'assignment'); ?></button>
 		</div>
 
 		<div class="tpa-sep"></div>
 
-		<h3 style="margin:0 0 10px"><?php esc_html_e('Main Tabs', 'toposel-assignment'); ?></h3>
+		<h3 style="margin:0 0 10px"><?php esc_html_e('Main Tabs', 'assignment'); ?></h3>
 		<div class="tpa-grid">
 			<div class="tpa-field">
-				<label><?php esc_html_e('Tab 1', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Tab 1', 'assignment'); ?></label>
 				<input name="tpa_main_tabs[a]" type="text" value="<?php echo esc_attr((string) ($main_tabs['a'] ?? 'All')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Tab 2', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Tab 2', 'assignment'); ?></label>
 				<input name="tpa_main_tabs[b]" type="text" value="<?php echo esc_attr((string) ($main_tabs['b'] ?? 'Men')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Tab 3', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Tab 3', 'assignment'); ?></label>
 				<input name="tpa_main_tabs[c]" type="text" value="<?php echo esc_attr((string) ($main_tabs['c'] ?? 'Women')); ?>" />
 			</div>
 		</div>
 
 		<div class="tpa-sep"></div>
 
-		<h3 style="margin:0 0 10px"><?php esc_html_e('Cards / Content', 'toposel-assignment'); ?></h3>
+		<h3 style="margin:0 0 10px"><?php esc_html_e('Cards / Content', 'assignment'); ?></h3>
 
-		<h4 style="margin:14px 0 10px"><?php esc_html_e('Primary Promo (green)', 'toposel-assignment'); ?></h4>
+		<h4 style="margin:14px 0 10px"><?php esc_html_e('Primary Promo (green)', 'assignment'); ?></h4>
 		<div class="tpa-grid">
 			<div class="tpa-field">
-				<label><?php esc_html_e('Title', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Title', 'assignment'); ?></label>
 				<input name="tpa_promo_primary[title]" type="text" value="<?php echo esc_attr((string) ($promo_primary['title'] ?? 'GET UP TO 50% OFF')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Button Label', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Button Label', 'assignment'); ?></label>
 				<input name="tpa_promo_primary[cta_label]" type="text" value="<?php echo esc_attr((string) ($promo_primary['cta_label'] ?? 'Get Discount')); ?>" />
 			</div>
-			<?php self::render_url_field(__('Button Link', 'toposel-assignment'), 'tpa_promo_primary[url]', (string) ($promo_primary['url'] ?? '')); ?>
+			<?php self::render_url_field(__('Button Link', 'assignment'), 'tpa_promo_primary[url]', (string) ($promo_primary['url'] ?? '')); ?>
 			<div></div>
-			<?php self::render_image_field(__('Primary Image (Left)', 'toposel-assignment'), 'tpa_promo_primary_image_left', 'tpa_promo_primary[image_left_id]', (int) ($promo_primary['image_left_id'] ?? 0), TPA_Defaults::image_url('promo_primary.image_left_id')); ?>
-			<?php self::render_image_field(__('Primary Image (Right)', 'toposel-assignment'), 'tpa_promo_primary_image_right', 'tpa_promo_primary[image_right_id]', (int) ($promo_primary['image_right_id'] ?? 0), TPA_Defaults::image_url('promo_primary.image_right_id')); ?>
+			<?php self::render_image_field(__('Primary Image (Left)', 'assignment'), 'tpa_promo_primary_image_left', 'tpa_promo_primary[image_left_id]', (int) ($promo_primary['image_left_id'] ?? 0), TPA_Defaults::image_url('promo_primary.image_left_id')); ?>
+			<?php self::render_image_field(__('Primary Image (Right)', 'assignment'), 'tpa_promo_primary_image_right', 'tpa_promo_primary[image_right_id]', (int) ($promo_primary['image_right_id'] ?? 0), TPA_Defaults::image_url('promo_primary.image_right_id')); ?>
 		</div>
 
-		<h4 style="margin:14px 0 10px"><?php esc_html_e('Secondary Promo (yellow)', 'toposel-assignment'); ?></h4>
+		<h4 style="margin:14px 0 10px"><?php esc_html_e('Secondary Promo (yellow)', 'assignment'); ?></h4>
 		<div class="tpa-grid">
 			<div class="tpa-field">
-				<label><?php esc_html_e('Title', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Title', 'assignment'); ?></label>
 				<input name="tpa_promo_secondary[title]" type="text" value="<?php echo esc_attr((string) ($promo_secondary['title'] ?? "Winter's weekend")); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Subtitle', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Subtitle', 'assignment'); ?></label>
 				<input name="tpa_promo_secondary[subtitle]" type="text" value="<?php echo esc_attr((string) ($promo_secondary['subtitle'] ?? 'keep it casual')); ?>" />
 			</div>
-			<?php self::render_url_field(__('Card Link (arrow button)', 'toposel-assignment'), 'tpa_promo_secondary[url]', (string) ($promo_secondary['url'] ?? '')); ?>
-			<?php self::render_image_field(__('Image', 'toposel-assignment'), 'tpa_promo_secondary_image', 'tpa_promo_secondary[image_id]', (int) ($promo_secondary['image_id'] ?? 0), TPA_Defaults::image_url('promo_secondary.image_id')); ?>
+			<?php self::render_url_field(__('Card Link (arrow button)', 'assignment'), 'tpa_promo_secondary[url]', (string) ($promo_secondary['url'] ?? '')); ?>
+			<?php self::render_image_field(__('Image', 'assignment'), 'tpa_promo_secondary_image', 'tpa_promo_secondary[image_id]', (int) ($promo_secondary['image_id'] ?? 0), TPA_Defaults::image_url('promo_secondary.image_id')); ?>
 		</div>
 
-		<h4 style="margin:14px 0 10px"><?php esc_html_e('Product Card 1', 'toposel-assignment'); ?></h4>
+		<h4 style="margin:14px 0 10px"><?php esc_html_e('Product Card 1', 'assignment'); ?></h4>
 		<div class="tpa-grid">
 			<div class="tpa-field">
-				<label><?php esc_html_e('Badge', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Badge', 'assignment'); ?></label>
 				<input name="tpa_product_1[badge]" type="text" value="<?php echo esc_attr((string) ($product_1['badge'] ?? 'Our Picks')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Title', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Title', 'assignment'); ?></label>
 				<input name="tpa_product_1[title]" type="text" value="<?php echo esc_attr((string) ($product_1['title'] ?? 'WMX Rubber Zebra sandal')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Price', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Price', 'assignment'); ?></label>
 				<input name="tpa_product_1[price]" type="text" value="<?php echo esc_attr((string) ($product_1['price'] ?? '$36')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Color dots (comma-separated)', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Color dots (comma-separated)', 'assignment'); ?></label>
 				<input name="tpa_product_1[dots]" type="text" value="<?php echo esc_attr((string) ($product_1['dots'] ?? '#ffd54f,#222222')); ?>" />
 			</div>
-			<?php self::render_url_field(__('Product Link (price button)', 'toposel-assignment'), 'tpa_product_1[url]', (string) ($product_1['url'] ?? '')); ?>
-			<?php self::render_image_field(__('Image', 'toposel-assignment'), 'tpa_product_1_image', 'tpa_product_1[image_id]', (int) ($product_1['image_id'] ?? 0), TPA_Defaults::image_url('product_1.image_id')); ?>
+			<?php self::render_url_field(__('Product Link (price button)', 'assignment'), 'tpa_product_1[url]', (string) ($product_1['url'] ?? '')); ?>
+			<?php self::render_image_field(__('Image', 'assignment'), 'tpa_product_1_image', 'tpa_product_1[image_id]', (int) ($product_1['image_id'] ?? 0), TPA_Defaults::image_url('product_1.image_id')); ?>
 		</div>
 
-		<h4 style="margin:14px 0 10px"><?php esc_html_e('Product Card 2', 'toposel-assignment'); ?></h4>
+		<h4 style="margin:14px 0 10px"><?php esc_html_e('Product Card 2', 'assignment'); ?></h4>
 		<div class="tpa-grid">
 			<div class="tpa-field">
-				<label><?php esc_html_e('Badge', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Badge', 'assignment'); ?></label>
 				<input name="tpa_product_2[badge]" type="text" value="<?php echo esc_attr((string) ($product_2['badge'] ?? 'Your Choice')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Title', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Title', 'assignment'); ?></label>
 				<input name="tpa_product_2[title]" type="text" value="<?php echo esc_attr((string) ($product_2['title'] ?? 'Super Skiny jogger in brown')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Price', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Price', 'assignment'); ?></label>
 				<input name="tpa_product_2[price]" type="text" value="<?php echo esc_attr((string) ($product_2['price'] ?? '$89')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Color dots (comma-separated)', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Color dots (comma-separated)', 'assignment'); ?></label>
 				<input name="tpa_product_2[dots]" type="text" value="<?php echo esc_attr((string) ($product_2['dots'] ?? '#ffd54f,#222222')); ?>" />
 			</div>
-			<?php self::render_url_field(__('Product Link (price button)', 'toposel-assignment'), 'tpa_product_2[url]', (string) ($product_2['url'] ?? '')); ?>
-			<?php self::render_image_field(__('Image', 'toposel-assignment'), 'tpa_product_2_image', 'tpa_product_2[image_id]', (int) ($product_2['image_id'] ?? 0), TPA_Defaults::image_url('product_2.image_id')); ?>
+			<?php self::render_url_field(__('Product Link (price button)', 'assignment'), 'tpa_product_2[url]', (string) ($product_2['url'] ?? '')); ?>
+			<?php self::render_image_field(__('Image', 'assignment'), 'tpa_product_2_image', 'tpa_product_2[image_id]', (int) ($product_2['image_id'] ?? 0), TPA_Defaults::image_url('product_2.image_id')); ?>
 		</div>
 
-		<h4 style="margin:14px 0 10px"><?php esc_html_e('Offer Card', 'toposel-assignment'); ?></h4>
+		<h4 style="margin:14px 0 10px"><?php esc_html_e('Offer Card', 'assignment'); ?></h4>
 		<div class="tpa-grid">
 			<div class="tpa-field">
-				<label><?php esc_html_e('Pill Label', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Pill Label', 'assignment'); ?></label>
 				<input name="tpa_offer_card[pill]" type="text" value="<?php echo esc_attr((string) ($offer_card['pill'] ?? 'Avail Offers')); ?>" />
 			</div>
-			<?php self::render_url_field(__('Offer Link (pill button)', 'toposel-assignment'), 'tpa_offer_card[url]', (string) ($offer_card['url'] ?? '')); ?>
-			<?php self::render_image_field(__('Image', 'toposel-assignment'), 'tpa_offer_card_image', 'tpa_offer_card[image_id]', (int) ($offer_card['image_id'] ?? 0), TPA_Defaults::image_url('offer_card.image_id')); ?>
+			<?php self::render_url_field(__('Offer Link (pill button)', 'assignment'), 'tpa_offer_card[url]', (string) ($offer_card['url'] ?? '')); ?>
+			<?php self::render_image_field(__('Image', 'assignment'), 'tpa_offer_card_image', 'tpa_offer_card[image_id]', (int) ($offer_card['image_id'] ?? 0), TPA_Defaults::image_url('offer_card.image_id')); ?>
 		</div>
 
-		<h4 style="margin:14px 0 10px"><?php esc_html_e('Favourites Card', 'toposel-assignment'); ?></h4>
+		<h4 style="margin:14px 0 10px"><?php esc_html_e('Favourites Card', 'assignment'); ?></h4>
 		<div class="tpa-grid">
 			<div class="tpa-field">
-				<label><?php esc_html_e('Title', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Title', 'assignment'); ?></label>
 				<input name="tpa_favourites_card[title]" type="text" value="<?php echo esc_attr((string) ($favourites_card['title'] ?? 'Favourites')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('CTA Label', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('CTA Label', 'assignment'); ?></label>
 				<input name="tpa_favourites_card[cta_label]" type="text" value="<?php echo esc_attr((string) ($favourites_card['cta_label'] ?? 'See All')); ?>" />
 			</div>
-			<?php self::render_url_field(__('CTA Link', 'toposel-assignment'), 'tpa_favourites_card[url]', (string) ($favourites_card['url'] ?? '')); ?>
+			<?php self::render_url_field(__('CTA Link', 'assignment'), 'tpa_favourites_card[url]', (string) ($favourites_card['url'] ?? '')); ?>
 			<div></div>
-			<?php self::render_image_field(__('Image A', 'toposel-assignment'), 'tpa_favourites_card_image_a', 'tpa_favourites_card[image_a_id]', (int) ($favourites_card['image_a_id'] ?? 0), TPA_Defaults::image_url('favourites_card.image_a_id')); ?>
-			<?php self::render_image_field(__('Image B', 'toposel-assignment'), 'tpa_favourites_card_image_b', 'tpa_favourites_card[image_b_id]', (int) ($favourites_card['image_b_id'] ?? 0), TPA_Defaults::image_url('favourites_card.image_b_id')); ?>
+			<?php self::render_image_field(__('Image A', 'assignment'), 'tpa_favourites_card_image_a', 'tpa_favourites_card[image_a_id]', (int) ($favourites_card['image_a_id'] ?? 0), TPA_Defaults::image_url('favourites_card.image_a_id')); ?>
+			<?php self::render_image_field(__('Image B', 'assignment'), 'tpa_favourites_card_image_b', 'tpa_favourites_card[image_b_id]', (int) ($favourites_card['image_b_id'] ?? 0), TPA_Defaults::image_url('favourites_card.image_b_id')); ?>
 		</div>
 
-		<h4 style="margin:14px 0 10px"><?php esc_html_e('Bottom Banner', 'toposel-assignment'); ?></h4>
+		<h4 style="margin:14px 0 10px"><?php esc_html_e('Bottom Banner', 'assignment'); ?></h4>
 		<div class="tpa-grid">
 			<div class="tpa-field">
-				<label><?php esc_html_e('Title', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Title', 'assignment'); ?></label>
 				<input name="tpa_bottom_banner[title]" type="text" value="<?php echo esc_attr((string) ($bottom_banner['title'] ?? 'Bring Bold Fashion')); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Subtitle', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Subtitle', 'assignment'); ?></label>
 				<input name="tpa_bottom_banner[subtitle]" type="text" value="<?php echo esc_attr((string) ($bottom_banner['subtitle'] ?? 'Layers on Layers')); ?>" />
 			</div>
-			<?php self::render_url_field(__('Banner Link (arrow button)', 'toposel-assignment'), 'tpa_bottom_banner[url]', (string) ($bottom_banner['url'] ?? '')); ?>
-			<?php self::render_image_field(__('Image', 'toposel-assignment'), 'tpa_bottom_banner_image', 'tpa_bottom_banner[image_id]', (int) ($bottom_banner['image_id'] ?? 0), TPA_Defaults::image_url('bottom_banner.image_id')); ?>
+			<?php self::render_url_field(__('Banner Link (arrow button)', 'assignment'), 'tpa_bottom_banner[url]', (string) ($bottom_banner['url'] ?? '')); ?>
+			<?php self::render_image_field(__('Image', 'assignment'), 'tpa_bottom_banner_image', 'tpa_bottom_banner[image_id]', (int) ($bottom_banner['image_id'] ?? 0), TPA_Defaults::image_url('bottom_banner.image_id')); ?>
 		</div>
 
 		<template id="tpa_tpl_nav">
@@ -335,22 +335,22 @@ final class TPA_Meta {
 		?>
 		<div class="tpa-row" data-row="nav" style="grid-template-columns:1fr 1fr auto auto">
 			<div class="tpa-field">
-				<label><?php esc_html_e('Label', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Label', 'assignment'); ?></label>
 				<input type="text" name="tpa_nav[<?php echo esc_attr((string) $idx); ?>][label]" value="<?php echo esc_attr($label); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Link', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Link', 'assignment'); ?></label>
 				<input type="url" name="tpa_nav[<?php echo esc_attr((string) $idx); ?>][url]" value="<?php echo esc_attr($url); ?>" placeholder="https://" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Active', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Active', 'assignment'); ?></label>
 				<label style="display:flex;gap:8px;align-items:center;margin-top:6px;font-weight:400">
 					<input type="checkbox" name="tpa_nav[<?php echo esc_attr((string) $idx); ?>][active]" value="1" <?php checked($active); ?> />
-					<span><?php esc_html_e('Selected', 'toposel-assignment'); ?></span>
+					<span><?php esc_html_e('Selected', 'assignment'); ?></span>
 				</label>
 			</div>
 			<div class="tpa-remove">
-				<button type="button" class="button-link-delete tpa-remove-row"><?php esc_html_e('Remove', 'toposel-assignment'); ?></button>
+				<button type="button" class="button-link-delete tpa-remove-row"><?php esc_html_e('Remove', 'assignment'); ?></button>
 			</div>
 		</div>
 		<?php
@@ -362,15 +362,15 @@ final class TPA_Meta {
 		?>
 		<div class="tpa-row" data-row="actions">
 			<div class="tpa-field">
-				<label><?php esc_html_e('Label', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Label', 'assignment'); ?></label>
 				<input type="text" name="tpa_actions[<?php echo esc_attr((string) $idx); ?>][label]" value="<?php echo esc_attr($label); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Link', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Link', 'assignment'); ?></label>
 				<input type="url" name="tpa_actions[<?php echo esc_attr((string) $idx); ?>][url]" value="<?php echo esc_attr($url); ?>" placeholder="https://" />
 			</div>
 			<div class="tpa-remove">
-				<button type="button" class="button-link-delete tpa-remove-row"><?php esc_html_e('Remove', 'toposel-assignment'); ?></button>
+				<button type="button" class="button-link-delete tpa-remove-row"><?php esc_html_e('Remove', 'assignment'); ?></button>
 			</div>
 		</div>
 		<?php
@@ -383,19 +383,19 @@ final class TPA_Meta {
 		?>
 		<div class="tpa-row" data-row="orders" style="grid-template-columns:1fr 1fr 1fr auto">
 			<div class="tpa-field">
-				<label><?php esc_html_e('Title', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Title', 'assignment'); ?></label>
 				<input type="text" name="tpa_last_orders[<?php echo esc_attr((string) $idx); ?>][title]" value="<?php echo esc_attr($title); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Link Text', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Link Text', 'assignment'); ?></label>
 				<input type="text" name="tpa_last_orders[<?php echo esc_attr((string) $idx); ?>][subtitle]" value="<?php echo esc_attr($subtitle); ?>" />
 			</div>
 			<div class="tpa-field">
-				<label><?php esc_html_e('Link', 'toposel-assignment'); ?></label>
+				<label><?php esc_html_e('Link', 'assignment'); ?></label>
 				<input type="url" name="tpa_last_orders[<?php echo esc_attr((string) $idx); ?>][url]" value="<?php echo esc_attr($url); ?>" placeholder="https://" />
 			</div>
 			<div class="tpa-remove">
-				<button type="button" class="button-link-delete tpa-remove-row"><?php esc_html_e('Remove', 'toposel-assignment'); ?></button>
+				<button type="button" class="button-link-delete tpa-remove-row"><?php esc_html_e('Remove', 'assignment'); ?></button>
 			</div>
 		</div>
 		<?php
@@ -420,10 +420,10 @@ final class TPA_Meta {
 			<input type="hidden" id="<?php echo esc_attr($input_id); ?>" name="<?php echo esc_attr($name); ?>" value="<?php echo esc_attr((string) $value); ?>" />
 			<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
 				<button type="button" class="button tpa-image-pick" data-target="<?php echo esc_attr($input_id); ?>" data-preview="<?php echo esc_attr($preview_id); ?>">
-					<?php esc_html_e('Choose Image', 'toposel-assignment'); ?>
+					<?php esc_html_e('Choose Image', 'assignment'); ?>
 				</button>
 				<button type="button" class="button tpa-image-clear" data-target="<?php echo esc_attr($input_id); ?>" data-preview="<?php echo esc_attr($preview_id); ?>">
-					<?php echo $default_url !== '' ? esc_html__('Use Default', 'toposel-assignment') : esc_html__('Clear', 'toposel-assignment'); ?>
+					<?php echo $default_url !== '' ? esc_html__('Use Default', 'assignment') : esc_html__('Clear', 'assignment'); ?>
 				</button>
 			</div>
 			<div class="tpa-image-preview" id="<?php echo esc_attr($preview_id); ?>" data-default="<?php echo esc_url($default_url); ?>" style="margin-top:10px">
@@ -431,7 +431,7 @@ final class TPA_Meta {
 					<img src="<?php echo esc_url($src); ?>" alt="" />
 				<?php elseif ($default_url !== '') : ?>
 					<img src="<?php echo esc_url($default_url); ?>" alt="" />
-					<p class="description"><?php esc_html_e('Default image', 'toposel-assignment'); ?></p>
+					<p class="description"><?php esc_html_e('Default image', 'assignment'); ?></p>
 				<?php endif; ?>
 			</div>
 		</div>
@@ -614,8 +614,8 @@ final class TPA_Meta {
 		foreach ($cols as $key => $label) {
 			$new[$key] = $label;
 			if ($key === 'title') {
-				$new['tpa_shortcode'] = __('Shortcode', 'toposel-assignment');
-				$new['tpa_app_url'] = __('App URL', 'toposel-assignment');
+				$new['tpa_shortcode'] = __('Shortcode', 'assignment');
+				$new['tpa_app_url'] = __('App URL', 'assignment');
 			}
 		}
 		return $new;
@@ -625,7 +625,7 @@ final class TPA_Meta {
 		if ($col !== 'tpa_shortcode') {
 			if ($col === 'tpa_app_url') {
 				$url = home_url('/tp-landing/' . (int) $post_id . '/');
-				echo '<a href="' . esc_url($url) . '" target="_blank" rel="noopener noreferrer">' . esc_html__('Open', 'toposel-assignment') . '</a>';
+				echo '<a href="' . esc_url($url) . '" target="_blank" rel="noopener noreferrer">' . esc_html__('Open', 'assignment') . '</a>';
 			}
 			return;
 		}
